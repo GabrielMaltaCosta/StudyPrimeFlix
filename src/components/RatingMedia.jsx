@@ -1,8 +1,9 @@
 function RatingMedia({ media }) {
+  const formattedMedia = media?.toFixed(1);
   return (
     <div className="rating">
       <span className="rating">
-        <h1>{media}</h1>
+        <h1>{formattedMedia}</h1>
       </span>
     </div>
   );

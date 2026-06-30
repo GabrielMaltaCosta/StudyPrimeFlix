@@ -13,12 +13,12 @@ export function useMovieDetails(movieId) {
         ]);
         setMovie(movieData);
         const allCrew = creditsData.cast;
-        const filterActors = allCrew.filter(
-          (a) => a.known_for_department == "Acting",
-        );
+        const filterActors = allCrew
+          .filter((a) => a.known_for_department == "Acting")
+          .filter((a) => a.profile_path !== null);
         setActors(filterActors);
       } catch (error) {
-        console.log("Erro fetching movie data ", error);
+        console.log("Erro fetching movie and actors data ", error);
       }
     }
     fetchMovieData();

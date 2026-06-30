@@ -2,6 +2,7 @@ import movieDate from "../../Helpers/MovieHelpers/movieDate.jsx";
 import movieAgeCertification from "../../Helpers/MovieHelpers/movieAgeCertification.jsx";
 import MovieGenres from "../MovieGenres.jsx";
 import RatingMedia from "../RatingMedia.jsx";
+import { movierRunTime } from "../../Helpers/MovieHelpers/movieRunTime.jsx";
 
 function BannerInfoMovie({ movie }) {
   if (!movie) return null;
@@ -33,7 +34,10 @@ function BannerInfoMovie({ movie }) {
             <span className="movie-release-date">
               {movieDate(movie.release_date).formattedDate}
             </span>
-            <MovieGenres genres={movie?.genres} />
+            - <MovieGenres genres={movie?.genres} />-
+            <span className="margin-left-5px movie-release-date">
+              {movierRunTime(movie.runtime)}
+            </span>
           </div>
           <RatingMedia media={movie.vote_average} />
           <p className="banner-movie-overview">{movie.overview}</p>

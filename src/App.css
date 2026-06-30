@@ -121,7 +121,7 @@ header{
 .movie-card {
   flex: 0 0 210px;
   min-width: 210px;
-  background-color: #333;
+  background-color: #222;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
@@ -244,4 +244,7 @@ header{
   background: #f5c518;
   color: #000;
   font-weight: bold;
+}
+.margin-left-5px{
+  margin-left: 5px;
 }
